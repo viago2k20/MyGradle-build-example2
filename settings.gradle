@@ -1,0 +1,15 @@
+rootProject.name = 'MyGradle-build-example2'
+//include 'module-1'
+//include ':module-1:db'
+//include ':module-1:service'
+//include ':module-1:api'
+
+include 'module-1'
+include 'module-1:db'
+findProject(':module-1:db')?.name = 'db'
+include 'module-1:api'
+findProject(':module-1:api')?.name = 'api'
+include 'module-1:service'
+findProject(':module-1:service')?.name = 'service'
+
+
